@@ -1,25 +1,27 @@
-<div class="card col-6 text-center">
-    <div class="card-header">
-      Books
-    </div>
-    <div class="row col-12" *ngFor="let book of books">
-      <ul class="list-group list-group-flush" *ngIf="!book.inCart" >
-        <li class="list-group-item">
-          <h4>{{book.title}}</h4>
-          <h6>{{book.subtitle}}</h6>
-          <b>By: {{book.author}}</b>
-          <br>
-          <br>
-          <p class="fst-italic">{{book.description}}</p>
-          <p>Pages: {{book.pages}}</p>
-          <p>Publisher: {{book.publisher}}</p>
-          <p>Published: {{book.published}}</p>
-          <div class="row justify-content-evenly">
-            <button (click)="addToCart(book.id)" type="button" class="btn btn-success col-2">Add to Cart</button>
-            <button (click)="removeBook(book.id)" type="button" class="btn btn-danger col-2">Delete</button>
-          </div>
-          <hr>
-        </li>
-      </ul>
-    </div>
+<div class="bg">
+  <div class="card col-6 text-center m-auto">
+      <div class="card-header">
+        Books
+      </div>
+      <div class="row col-12" *ngFor="let book of books">
+        <ul class="list-group list-group-flush" *ngIf="!book.inCart" >
+          <li class="list-group-item pl-0">
+            <h4>{{book.title}}</h4>
+            <h6>{{book.subtitle}}</h6>
+            <b>By: {{book.author}}</b>
+            <br>
+            <br>
+            <p class="fst-italic">{{book.description}}</p>
+            <p>Pages: {{book.pages}}</p>
+            <p>Publisher: {{book.publisher}}</p>
+            <p>Published: {{book.published}}</p>
+            <div class="row justify-content-evenly">
+              <button (click)="addToCart(book.id)" type="button" class="btn btn-success col-2">Add to Cart</button>
+              <button (click)="removeBook(book.id)" type="button" class="btn btn-danger col-2">Delete</button>
+            </div>
+            <hr>
+          </li>
+        </ul>
+      </div>
+  </div>
 </div>
